@@ -1,0 +1,44 @@
+html, body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+h5{
+    display: block;
+    margin-bottom:0;
+    padding: 0;
+    line-height: 1;
+}
+input{
+    margin-top:0;
+    display:none;
+}
+label{
+    margin-top:0;
+    cursor:pointer;
+    color:red;
+    font-size:300px;
+    transition: color 0.2s, transform 0.2s;
+    animation: heartbeat 1s ease-in-out infinite; /* Always animate */
+    padding: 0;
+}
+input:checked +label{
+color:#CCC;
+font-size: 100px;
+/*animation: heartbeat 1s ease-in-out infinite;  Always animate */
+}
+label:hover{
+color:#ccc;
+/*animation: heartbeat 1s ease-in-out infinite;  Always animate */
+}
+/* Keyframes for pulsing animation */
+@keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
